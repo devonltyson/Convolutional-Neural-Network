@@ -125,7 +125,7 @@ class HotDogTrainer(object):
             print('SAVING MODEL')
             self.savemodel({'best':self.avg_acc.avg})
         else:
-            if self.stat_cache['best'] < self.avg_acc.avg:
+            if self.stat_cache['best'] > self.avg_acc.avg:
                 print('LOADING BEST MODEL')
                 self.load_old_best()
 
